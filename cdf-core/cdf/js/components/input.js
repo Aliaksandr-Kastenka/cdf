@@ -1066,6 +1066,9 @@ var ToggleButtonBaseComponent = InputBaseComponent.extend({
     // update the placeholder
     this.placeholder().html(selectHTML);
     this.currentVal = null;
+    if(this.autoTopHeight != null) { 
+      $("div.prompt-panel").scrollTop(this.autoTopHeight); 
+    } 
     this._doAutoFocus();
   },
   callAjaxAfterRender: function(name){
